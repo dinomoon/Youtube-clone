@@ -80,3 +80,5 @@ export default globalRouter;
 ### pug - layouts, components
 
 ### pug - local variables
+
+### pug - template variables
