@@ -12,4 +12,4 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-app.listen("5000", console.log("Listening"));
+export default app;

@@ -51,3 +51,26 @@ app.use(cookieParser());
 
 app.listen("5000", console.log("Listening"));
 ```
+
+### router 만들기
+
+```js
+// app.js
+import app from "./init";
+import globalRouter from "./routers/globalRouter";
+
+const PORT = "5000";
+
+app.use("/", globalRouter);
+
+app.listen(PORT, console.log(`Listening on http://localhost:${PORT}`));
+
+// globalRouter.js
+import express from "express";
+
+const globalRouter = express.Router();
+
+globalRouter.get("/", (req, res) => res.send("Hello from home"));
+
+export default globalRouter;
+```
