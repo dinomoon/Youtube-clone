@@ -1,10 +1,11 @@
 header.header
-  h1 Mktube
+  h1
+    a(href=routes.home) #{siteName}
   .header__column
     i.fab.fa-youtube
   .header__column
     ul
       li
-        a(href="#") join
+        a(href=routes.join) join
       li
-        a(href="#") login
+        a(href=routes.login) login
