@@ -1,0 +1,28 @@
+{
+  "name": "youtube-clone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dinomoon/Youtube-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dinomoon/Youtube-clone/issues"
+  },
+  "homepage": "https://github.com/dinomoon/Youtube-clone#readme",
+  "dependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
