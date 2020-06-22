@@ -74,3 +74,5 @@ globalRouter.get("/", (req, res) => res.send("Hello from home"));
 
 export default globalRouter;
 ```
+
+### router 추가, controller 만들기
