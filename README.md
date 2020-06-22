@@ -76,3 +76,5 @@ export default globalRouter;
 ```
 
 ### router 추가, controller 만들기
+
+### pug - layouts, components
