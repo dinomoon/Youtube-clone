@@ -96,3 +96,5 @@ export default globalRouter;
 ### pug - upload, editVideo, changePassword
 
 ### Home controller - make fake database and use it
+
+### pug - mixins

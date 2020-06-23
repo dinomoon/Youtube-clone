@@ -4,7 +4,8 @@ export const videos = [
     title: "Video awesome",
     description: "This is something I love",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     creator: {
       id: 121212,
       name: "Nicolas",
@@ -16,7 +17,8 @@ export const videos = [
     title: "Video super",
     description: "This is something I love",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     creator: {
       id: 121212,
       name: "Nicolas",
@@ -28,7 +30,8 @@ export const videos = [
     title: "Video nice",
     description: "This is something I love",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     creator: {
       id: 121212,
       name: "Nicolas",
@@ -40,7 +43,8 @@ export const videos = [
     title: "Video perfect",
     description: "This is something I love",
     views: 24,
-    videoFile: "https://archive.org/details/BigBuckBunny_124",
+    videoFile:
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     creator: {
       id: 121212,
       name: "Nicolas",
