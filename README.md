@@ -94,3 +94,5 @@ export default globalRouter;
 ### pug - editProfile
 
 ### pug - upload, editVideo, changePassword
+
+### Home controller - make fake database
