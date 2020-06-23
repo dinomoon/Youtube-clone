@@ -10,8 +10,17 @@ header.header
       button(type="submit")
         i.fas.fa-search
   .header__column
-    ul
-      li
-        a(href=routes.join) join
-      li
-        a(href=routes.login) login
+    if user.isAuthenticated
+      ul
+        li
+          a(href=routes.join) join
+        li
+          a(href=routes.login) login
+    else
+      ul
+        li
+          a(href=routes.upload) upload
+        li
+          a(href=routes.userDetail(user.id)) profile
+        li
+          a(href=routes.logout) log out
