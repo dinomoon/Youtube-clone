@@ -88,3 +88,5 @@ export default globalRouter;
 1. get방식으로 form을 보내면 req.qeury에 들어있다.
 2. const {query: {term: searchingBy}} = req; 와 const searchingBy = req.query.term 는 같다.
 3. template variable로 searchingBy를 보낼 때, searchingBy: searchingBy와 searchingBy는 같다.
+
+### pug - log in, join

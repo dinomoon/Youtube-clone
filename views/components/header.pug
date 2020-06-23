@@ -3,10 +3,12 @@ header.header
     h1
       a(href=routes.home)
         i.fab.fa-youtube
-        strong #{siteName}
+        | #{siteName}
   .header__column
     form(action=routes.search, method="get")
       input(type="text", placeholder="Search by term..." name="term")
+      button(type="submit")
+        i.fas.fa-search
   .header__column
     ul
       li

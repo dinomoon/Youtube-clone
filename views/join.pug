@@ -1,0 +1,10 @@
+extends layouts/main
+
+block content
+  .form_container
+    form(action="", method="post")
+      input(type="email", name="email", placeholder="email")
+      input(type="password", name="password", placeholder="password")
+      input(type="password", name="password2", placeholder="verify password")
+      button(type="submit") Join now
+    include ./components/socialLogin
