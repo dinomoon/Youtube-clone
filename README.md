@@ -90,3 +90,5 @@ export default globalRouter;
 3. template variable로 searchingBy를 보낼 때, searchingBy: searchingBy와 searchingBy는 같다.
 
 ### pug - log in, join
+
+### pug - editProfile
