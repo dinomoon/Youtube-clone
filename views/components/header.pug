@@ -1,8 +1,12 @@
 header.header
-  h1
-    a(href=routes.home) #{siteName}
   .header__column
-    i.fab.fa-youtube
+    h1
+      a(href=routes.home)
+        i.fab.fa-youtube
+        strong #{siteName}
+  .header__column
+    form(action=routes.search, method="get")
+      input(type="text", placeholder="Search by term..." name="term")
   .header__column
     ul
       li
