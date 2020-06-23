@@ -92,3 +92,5 @@ export default globalRouter;
 ### pug - log in, join
 
 ### pug - editProfile
+
+### pug - upload, editVideo, changePassword

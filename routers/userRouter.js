@@ -1,9 +1,11 @@
 import express from "express";
-import { editProfile } from "../controllers/userController";
+import routes from "../routes";
+import { editProfile, changePassword } from "../controllers/userController";
 
 const userRouter = express.Router();
 
 userRouter.get("/");
-userRouter.get("/edit-profile", editProfile);
+userRouter.get(routes.editProfile, editProfile);
+userRouter.get(routes.changePassword, changePassword);
 
 export default userRouter;
