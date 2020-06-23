@@ -98,3 +98,5 @@ export default globalRouter;
 ### Home controller - make fake database and use it
 
 ### pug - mixins
+
+### Join controller
