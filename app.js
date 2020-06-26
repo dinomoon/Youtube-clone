@@ -8,6 +8,7 @@ import localMiddleware from "./middlewares";
 import dotenv from "dotenv";
 dotenv.config();
 import "./models/Video";
+import "./models/Comment";
 
 const PORT = process.env.PORT;
 

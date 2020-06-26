@@ -116,3 +116,5 @@ export default globalRouter;
 - dotenv? 숨기고 싶은 정보를 숨길 수 있게 해준다.
 
 ### Make Video Model
+
+### Make Comment Model
