@@ -102,3 +102,5 @@ export default globalRouter;
 ### Join controller
 
 ### Login controller, user.authenticated, profile클릭 시 해당 유저의 profile로 갈 수 있도록 하기
+
+### More controllers(videoDetail, logout, upload)
