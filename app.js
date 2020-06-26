@@ -1,3 +1,4 @@
+import "./db";
 import app from "./init";
 import routes from "./routes";
 import globalRouter from "./routers/globalRouter";

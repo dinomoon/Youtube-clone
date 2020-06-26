@@ -104,3 +104,9 @@ export default globalRouter;
 ### Login controller, user.authenticated, profile클릭 시 해당 유저의 profile로 갈 수 있도록 하기
 
 ### More controllers(videoDetail, logout, upload)
+
+### MongoDB and Mongoose
+
+- Mongoose: elegant mongodb object modeling for node.js
+
+### Connecting to MongoDB
