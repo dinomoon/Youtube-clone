@@ -5,8 +5,11 @@ import globalRouter from "./routers/globalRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import localMiddleware from "./middlewares";
+import dotenv from "dotenv";
+dotenv.config();
+import "./models/Video";
 
-const PORT = "5000";
+const PORT = process.env.PORT;
 
 app.use(localMiddleware);
 app.use(routes.home, globalRouter);

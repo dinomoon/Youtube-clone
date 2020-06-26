@@ -110,3 +110,9 @@ export default globalRouter;
 - Mongoose: elegant mongodb object modeling for node.js
 
 ### Connecting to MongoDB
+
+### Configuring Dot Env
+
+- dotenv? 숨기고 싶은 정보를 숨길 수 있게 해준다.
+
+### Make Video Model
