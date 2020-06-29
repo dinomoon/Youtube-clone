@@ -105,6 +105,8 @@ export default globalRouter;
 
 ### More controllers(videoDetail, logout, upload)
 
+---
+
 ### MongoDB and Mongoose
 
 - Mongoose: elegant mongodb object modeling for node.js
@@ -118,3 +120,7 @@ export default globalRouter;
 ### Make Video Model
 
 ### Make Comment Model
+
+### 데이터베이스에서 video 가져와서 home에 뿌리기
+
+- async await 사용하기
