@@ -124,3 +124,10 @@ export default globalRouter;
 ### 데이터베이스에서 video 가져와서 home에 뿌리기
 
 - async await 사용하기
+
+### multer와 express.static
+
+- npm i multer
+- multer? 파일을 서버로 보내고 URL을 알려주는 고마운 미들웨어~!
+- enctype="multipart/form-data"
+- app.use("/videos", express.static("videos"))
