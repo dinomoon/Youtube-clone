@@ -133,3 +133,10 @@ export default globalRouter;
 - app.use("/videos", express.static("videos"))
 
 ### videoDetail로 클릭한 video넘겨주기
+
+- Video.findById(id);
+
+### editVideo~~!
+
+- getEditVideo controller 에서는 video의 기본정보를 채워준다.
+- postEditVideo controller 에서는 바뀐 정보를 업데이트한다.
