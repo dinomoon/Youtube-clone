@@ -140,3 +140,5 @@ export default globalRouter;
 
 - getEditVideo controller 에서는 video의 기본정보를 채워준다.
 - postEditVideo controller 에서는 바뀐 정보를 업데이트한다.
+
+### deleteVideo~~!

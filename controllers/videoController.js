@@ -10,6 +10,7 @@ export const home = async (req, res) => {
     res.render("home", { pageTitle: "home", videos: [] });
   }
 };
+
 export const search = (req, res) => {
   const {
     query: { term: searchingBy },
@@ -68,4 +69,16 @@ export const postEditVideo = async (req, res) => {
   } catch (error) {
     res.redirect(routes.home);
   }
+};
+
+export const deleteVideo = async (req, res) => {
+  const {
+    params: { id },
+  } = req;
+  try {
+    await Video.findByIdAndRemove({ _id: id });
+  } catch (error) {
+    console.log(error);
+  }
+  res.redirect(routes.home);
 };
