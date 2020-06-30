@@ -164,3 +164,10 @@ export default globalRouter;
 - 많은 파일들을 가져와서 Webpack에게 주면 호환이 되는 static 파일들로 바꿔서 준다.
 - npm i webpack webpack-cli -> cli? 터미널에서 webpack 사용할 수 있게 해줌
 - npm run dev:server, npm run dev:assets
+
+### Webpack 설정~~~
+
+- dotenv를 아래처럼 직접 사용할 수도 있다고 한다.
+- "dev:assets": "cross-env WEBPACK_ENV=development webpack"
+- "build:assets": "cross-env WEBPACK_ENV=production webpack"
+- webpack.config.js 파일에 코드 채우기~~~~
