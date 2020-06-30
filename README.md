@@ -131,3 +131,5 @@ export default globalRouter;
 - multer? 파일을 서버로 보내고 URL을 알려주는 고마운 미들웨어~!
 - enctype="multipart/form-data"
 - app.use("/videos", express.static("videos"))
+
+### videoDetail로 클릭한 video넘겨주기
