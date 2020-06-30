@@ -155,3 +155,12 @@ export default globalRouter;
 
 - regular expression
 - Video.find({title: {$regex: searchingBy, $options: "i"}})
+
+---
+
+### What is Webpack?
+
+- module bundler
+- 많은 파일들을 가져와서 Webpack에게 주면 호환이 되는 static 파일들로 바꿔서 준다.
+- npm i webpack webpack-cli -> cli? 터미널에서 webpack 사용할 수 있게 해줌
+- npm run dev:server, npm run dev:assets
