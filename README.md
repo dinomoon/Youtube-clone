@@ -150,3 +150,8 @@ export default globalRouter;
 - npm i eslint-plugin-prettier
 - npm i eslint-config-prettier
 - eslint --init
+
+### Searching Videos~!
+
+- regular expression
+- Video.find({title: {$regex: searchingBy, $options: "i"}})

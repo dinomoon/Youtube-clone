@@ -1,5 +1,11 @@
 extends layouts/main
+include mixins/videoBlock
 
 block content
   .search__header
     h2 Searching for: #{searchingBy}
+  if videos.length === 0
+    h3 We don't have videos you looking for..
+  else
+    each video in videos
+      +videoBlock(video)
