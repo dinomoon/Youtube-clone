@@ -142,3 +142,11 @@ export default globalRouter;
 - postEditVideo controller 에서는 바뀐 정보를 업데이트한다.
 
 ### deleteVideo~~!
+
+### ESLint~!
+
+- javascript 문법 에러와 코딩 스타일을 지적해준다.
+- npm i eslint
+- npm i eslint-plugin-prettier
+- npm i eslint-config-prettier
+- eslint --init
