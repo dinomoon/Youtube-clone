@@ -1,13 +1,13 @@
 header.header
   .header__column
-    h1
+    h1.header__title
       a(href=routes.home)
         i.fab.fa-youtube
         | #{siteName}
   .header__column
     form(action=routes.search, method="get")
-      input(type="text", placeholder="Search by term..." name="term")
-      button(type="submit")
+      input.search__box(type="text", placeholder="검색" name="term")
+      button.search__button(type="submit")
         i.fas.fa-search
   .header__column
     if user.isAuthenticated

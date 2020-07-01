@@ -1,4 +1,46 @@
 @import "/config/_variables.scss";
-body {
-  background-color: $bgColor;
+@import "/config/reset.scss";
+
+.header {
+  height: 56px;
+  padding: 0 16px;
+  color: #fff;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header__title {
+    font-size: 1.5em;
+    .fab.fa-youtube {
+      color: $red;
+      margin: 0 10px;
+    }
+  }
+  .search__box {
+    width: 400px;
+    padding: 6px;
+    border: none;
+    background-color: #000;
+    color: $dark-gray;
+  }
+  .search__button {
+    padding: 6px 20px;
+    background-color: #444;
+    border: none;
+    .fa-search {
+      color: $dark-gray;
+    }
+  }
+  .search__button:hover {
+    cursor: pointer;
+  }
+  .search__box:focus {
+    outline: 1px solid #fff;
+  }
+  .header__column:last-child ul {
+    display: flex;
+    li a {
+      padding: 10px;
+    }
+  }
 }
