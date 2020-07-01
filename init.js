@@ -14,5 +14,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use("/videos", express.static("videos"));
+app.use("/static", express.static("static"));
 
 export default app;
