@@ -12,3 +12,12 @@ a {
 ul {
   list-style-type: none;
 }
+
+input,
+button {
+  border: none;
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}

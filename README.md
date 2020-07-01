@@ -171,3 +171,7 @@ export default globalRouter;
 - "dev:assets": "cross-env WEBPACK_ENV=development webpack"
 - "build:assets": "cross-env WEBPACK_ENV=production webpack"
 - webpack.config.js 파일에 코드 채우기~~~~
+
+### 스타일링~~!
+
+- li:not(:last-child) !!
