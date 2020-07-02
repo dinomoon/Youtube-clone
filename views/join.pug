@@ -3,8 +3,13 @@ extends layouts/main
 block content
   .form__container
     form.form(action=routes.join, method="post")
-      input.input(type="email", name="email", placeholder="email" required=true)
-      input.input(type="password", name="password", placeholder="password" required=true)
-      input.input(type="password", name="password2", placeholder="verify password" required=true)
-      button.submit__btn(type="submit") Join now
+      label.label(for="userName") Username
+      input.input(type="text", id="userName", name="userName", required=true)
+      label.label(for="email") Email
+      input.input(type="email", id="email", name="email", required=true)
+      label.label(for="password") Password
+      input.input(type="password", id="password", name="password", required=true)
+      label.label(for="verify password") Verify Password
+      input.input(type="password", id="verify password", name="password2", required=true)
+      button.submit__btn(type="submit") Sign up
     include ./components/socialLogin

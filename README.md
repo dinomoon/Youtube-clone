@@ -184,3 +184,12 @@ export default globalRouter;
 - User 스키마 만들기
 - npm i passport-local-mongoose
 - npm i passport passport-local
+
+### serializeUser, deserializeUser
+
+- serialization? 어떤 정보(field)를 쿠키에게 줄 것인가
+- 쿠키? 유저에 대한 정보
+- 쿠키는 자동으로 백엔드로 전송 -> 백엔드에서 ID가 1인 사용자가 누구인지 알려줌
+- 쿠키에는 누군가 접근할 수 있는 가능성이 있기 때문에 중요한 정보는 넣지 말 것
+- desrialization? 쿠키에서 정보를 가져오는 것
+- 회원가입!!
