@@ -1,7 +1,23 @@
 import passport from "passport";
 import User from "./models/User";
+import GithubStrategy from "passport-github";
+import dotenv from "dotenv";
+import { githubLoginCallback } from "./controllers/userController";
+import routes from "./routes";
+dotenv.config();
 
 passport.use(User.createStrategy());
+
+passport.use(
+  new GithubStrategy(
+    {
+      clientID: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET,
+      callbackURL: `http://localhost:5000${routes.githubCallback}`,
+    },
+    githubLoginCallback
+  )
+);
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());

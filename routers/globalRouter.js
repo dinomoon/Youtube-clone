@@ -7,19 +7,35 @@ import {
   getLogin,
   postLogin,
 } from "../controllers/userController";
-import { onlyPublic } from "../middlewares";
+import { onlyPublic, onlyPrivate } from "../middlewares";
+import routes from "../routes";
+import passport from "passport";
 
 const globalRouter = express.Router();
 
-globalRouter.get("/", home);
-globalRouter.get("/search", search);
+globalRouter.get(routes.home, home);
+globalRouter.get(routes.search, search);
 
-globalRouter.get("/join", onlyPublic, getJoin);
-globalRouter.post("/join", onlyPublic, postJoin, postLogin);
+// join
+globalRouter.get(routes.join, onlyPublic, getJoin);
+globalRouter.post(routes.join, onlyPublic, postJoin, postLogin);
 
-globalRouter.get("/login", onlyPublic, getLogin);
-globalRouter.post("/login", onlyPublic, postLogin);
+// login
+globalRouter.get(routes.login, onlyPublic, getLogin);
+globalRouter.post(routes.login, onlyPublic, postLogin);
 
-globalRouter.get("/logout", logout);
+// logout
+globalRouter.get(routes.logout, onlyPrivate, logout);
+
+// github
+globalRouter.get(routes.github, passport.authenticate("github"));
+globalRouter.get(
+  routes.githubCallback,
+  passport.authenticate("github", { failureRedirect: routes.login }),
+  function (req, res) {
+    // Successful authentication, redirect home.
+    res.redirect(routes.home);
+  }
+);
 
 export default globalRouter;
