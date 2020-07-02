@@ -14,7 +14,7 @@ globalRouter.get("/", home);
 globalRouter.get("/search", search);
 
 globalRouter.get("/join", getJoin);
-globalRouter.post("/join", postJoin);
+globalRouter.post("/join", postJoin, postLogin);
 
 globalRouter.get("/login", getLogin);
 globalRouter.post("/login", postLogin);

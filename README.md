@@ -193,3 +193,10 @@ export default globalRouter;
 - 쿠키에는 누군가 접근할 수 있는 가능성이 있기 때문에 중요한 정보는 넣지 말 것
 - desrialization? 쿠키에서 정보를 가져오는 것
 - 회원가입!!
+
+### authenticate
+
+- 회원가입을 하면 postLogin으로 보내고 거기서 이메일과 비밀번호를 확인한 후 홈으로 보내주기
+- app.use(passport.initialize());
+- app.use(passport.session());
+- 쿠키에서 사용자 정보 가져온다. 그리고 req.user로 만들어준다. -> 미들웨어에서 변수에 추가함으로써 template에서 user를 사용할 수 있다.
