@@ -4,7 +4,10 @@ import helmet from "helmet";
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import passport from "passport";
+import session from "express-session";
 import "./passport";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 
@@ -23,6 +26,15 @@ app.use(cookieParser());
 // static
 app.use("/videos", express.static("videos"));
 app.use("/static", express.static("static"));
+
+// session
+app.use(
+  session({
+    secret: process.env.COOKIE_SECRET,
+    resave: true,
+    saveUninitialized: false,
+  })
+);
 
 // passport
 app.use(passport.initialize());

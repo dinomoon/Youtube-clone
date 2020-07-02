@@ -200,3 +200,7 @@ export default globalRouter;
 - app.use(passport.initialize());
 - app.use(passport.session());
 - 쿠키에서 사용자 정보 가져온다. 그리고 req.user로 만들어준다. -> 미들웨어에서 변수에 추가함으로써 template에서 user를 사용할 수 있다.
+
+### session
+
+- npm i express-session

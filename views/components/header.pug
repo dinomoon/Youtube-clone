@@ -10,14 +10,13 @@ header.header
       button.search__button(type="submit")
         i.fas.fa-search
   .header__column
-    if !user.isAuthenticated
-      ul
+    ul
+      if !user
         li
           a(href=routes.login) Sign in
         li
           a(href=routes.join) Sign Up
-    else
-      ul
+      else
         li
           a(href=`/videos${routes.upload}`) upload
         li
