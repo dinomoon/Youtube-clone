@@ -2,8 +2,8 @@ extends layouts/main
 
 block content
   .form__container
-    form(action=routes.login, method="post")
-      input(type="email", name="email", placeholder="email" required=true)
-      input(type="password", name="password", placeholder="password" required=true)
-      button(type="submit") Log in
+    form.form(action=routes.login, method="post")
+      input.input(type="email", name="email", placeholder="email" required=true)
+      input.input(type="password", name="password", placeholder="password" required=true)
+      button.submit__btn(type="submit") Log in
     include ./components/socialLogin

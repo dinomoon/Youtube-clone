@@ -10,12 +10,12 @@ header.header
       button.search__button(type="submit")
         i.fas.fa-search
   .header__column
-    if user.isAuthenticated
+    if !user.isAuthenticated
       ul
         li
           a(href=routes.join) join
         li
-          a(href=routes.login) login
+          a(href=routes.login) log in
     else
       ul
         li

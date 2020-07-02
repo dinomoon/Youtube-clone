@@ -2,9 +2,9 @@ extends layouts/main
 
 block content
   .form__container
-    form(action=routes.join, method="post")
-      input(type="email", name="email", placeholder="email" required=true)
-      input(type="password", name="password", placeholder="password" required=true)
-      input(type="password", name="password2", placeholder="verify password" required=true)
-      button(type="submit") Join now
+    form.form(action=routes.join, method="post")
+      input.input(type="email", name="email", placeholder="email" required=true)
+      input.input(type="password", name="password", placeholder="password" required=true)
+      input.input(type="password", name="password2", placeholder="verify password" required=true)
+      button.submit__btn(type="submit") Join now
     include ./components/socialLogin

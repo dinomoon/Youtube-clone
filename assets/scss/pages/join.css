@@ -1,0 +1,33 @@
+.form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 100px 0;
+}
+
+.form__container form input {
+  display: block;
+  border: 1px solid;
+}
+
+.form__container form button {
+  background-color: #444;
+}
+
+.form__container form input,
+.form__container form button {
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 10px 16px;
+}
+
+.form__container .social__login button {
+  display: block;
+}

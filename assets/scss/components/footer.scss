@@ -1,0 +1,10 @@
+.footer {
+  text-align: center;
+  .footer__text {
+    color: rgba(0, 0, 0, 0.6);
+    .fa-youtube {
+      margin: 0 2px 0 6px;
+      color: $red;
+    }
+  }
+}

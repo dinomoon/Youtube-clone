@@ -23,7 +23,7 @@ const config = {
             loader: "postcss-loader",
             options: {
               plugins() {
-                return [autoPrefixer({ browsers: "cover 99.5%" })];
+                return [autoPrefixer({ overrideBrowserslist: "cover 99.5%" })];
               },
             },
           }, // prefix를 붙여준다.
