@@ -204,3 +204,9 @@ export default globalRouter;
 ### session
 
 - npm i express-session
+
+### Mongo store
+
+- npm i connect-mongo
+- 서버를 재시작하면 로그인이 풀리기 때문에 session을 db에 저장해야함
+- 로그인 되어있을 때는 join, login페이지에 접근 못하도록 미들웨어 만들기

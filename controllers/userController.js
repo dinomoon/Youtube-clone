@@ -8,9 +8,8 @@ export const postJoin = async (req, res, next) => {
     body: { userName, email, password, password2 },
   } = req;
   if (password == password2) {
-    console.log(userName);
     try {
-      const user = await User({ userName, email });
+      const user = await User({ name: userName, email });
       await User.register(user, password);
       next();
     } catch (error) {
@@ -31,6 +30,7 @@ export const postLogin = passport.authenticate("local", {
 });
 
 export const logout = (req, res) => {
+  req.logout();
   res.redirect(routes.home);
 };
 export const editProfile = (req, res) =>

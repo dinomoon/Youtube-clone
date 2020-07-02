@@ -2,6 +2,7 @@ extends layouts/main
 
 block content
   .form__container
+    h2.form__title Sign in to MKtube
     form.form(action=routes.login, method="post")
       label.label(for="email") Email
       input.input(type="email", id="email", name="email", placeholder="email" required=true)

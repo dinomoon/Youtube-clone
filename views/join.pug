@@ -2,6 +2,7 @@ extends layouts/main
 
 block content
   .form__container
+    h2.form__title Create your account
     form.form(action=routes.join, method="post")
       label.label(for="userName") Username
       input.input(type="text", id="userName", name="userName", required=true)

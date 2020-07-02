@@ -1,43 +1,11 @@
-import express from "express";
-import morgan from "morgan";
-import helmet from "helmet";
-import bodyParser from "body-parser";
-import cookieParser from "cookie-parser";
-import passport from "passport";
-import session from "express-session";
-import "./passport";
+import app from "./app";
+import "./db";
+import "./models/Video";
+import "./models/Comment";
+import "./models/User";
 import dotenv from "dotenv";
 dotenv.config();
 
-const app = express();
+const PORT = process.env.PORT;
 
-app.set("view engine", "pug");
-
-app.use(helmet());
-app.use(morgan("dev"));
-
-// bodyParser
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-// cookieParser
-app.use(cookieParser());
-
-// static
-app.use("/videos", express.static("videos"));
-app.use("/static", express.static("static"));
-
-// session
-app.use(
-  session({
-    secret: process.env.COOKIE_SECRET,
-    resave: true,
-    saveUninitialized: false,
-  })
-);
-
-// passport
-app.use(passport.initialize());
-app.use(passport.session());
-
-export default app;
+app.listen(PORT, console.log(`Listening on http://localhost:${PORT}`));
