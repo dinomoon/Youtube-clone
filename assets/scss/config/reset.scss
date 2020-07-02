@@ -14,8 +14,10 @@ ul {
 }
 
 input,
-button {
+button,
+textarea {
   border: none;
+  font-size: 1rem;
   &:focus,
   &:active {
     outline: none;

@@ -1,0 +1,49 @@
+.video__container {
+  display: flex;
+  justify-content: center;
+
+  .video__thumnail {
+    margin-bottom: 10px;
+  }
+
+  .video__info {
+    .video__title {
+      font-size: 1.5em;
+      margin-bottom: 6px;
+    }
+    .video__views,
+    .video__creator {
+      display: block;
+      color: rgba(0, 0, 0, 0.5);
+      font-weight: 400;
+    }
+    .video__views {
+      margin-bottom: 20px;
+    }
+    .video__description {
+      color: #333;
+      margin-bottom: 10px;
+    }
+  }
+
+  .video__comments {
+    .video__comments--number {
+      font-weight: 400;
+    }
+  }
+
+  .video__edit {
+    text-align: right;
+    margin-bottom: 20px;
+    .video__edit--btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      padding: 10px 16px;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 6px;
+    }
+  }
+}

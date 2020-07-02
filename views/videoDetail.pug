@@ -1,17 +1,18 @@
 extends layouts/main
 
 block content
-  h2 #{pageTitle}
-  .video__player
-    video(src=`/${video.fileUrl}`)
-  .video__edit
-    a(href=routes.editVideo(video.id)) Edit Video
-  .video__info
-    h3.video__title=video.title
-    strong.video__views=video.views
-    p.video__description=video.description
-  .video__comments
-    if video.comments.length === 1
-      strong.video__comments--number 1 comment
-    else
-      strong.video__comments--number #{video.comments.length} comments
+  .video__container
+    .video_wrap
+      .video__player
+        video(src=`/${video.fileUrl}`)
+      .video__edit
+        a.video__edit--btn(href=routes.editVideo(video.id)) Edit Video
+      .video__info
+        h3.video__title=video.title
+        strong.video__views 조회수 #{video.views}
+        p.video__description=video.description
+      .video__comments
+        if video.comments.length === 1
+          strong.video__comments--number 1 comment
+        else
+          strong.video__comments--number #{video.comments.length} comments

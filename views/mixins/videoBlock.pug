@@ -2,6 +2,8 @@ mixin videoBlock(video = {})
   .videoBlock
     a(href=routes.videoDetail(video.id))
       video.video__thumnail(src=video.fileUrl, controls=true)
-      h2.video__title=video.title
-      p.video__description=video.description
-      strong.video__views=video.views
+      .video__info
+        h2.video__title=video.title
+        strong.video__creator 올린 사람
+        //p.video__description=video.description
+        strong.video__views 조회수 #{video.views}

@@ -2,8 +2,11 @@ extends layouts/main
 
 block content
   .form__container
-    form(action=routes.editVideo(video.id), method="POST")
-      input(type="text", placeholder="Title", name="title", value=video.title)
-      textarea(name="description", placeholder="Description")=video.description
-      input(type="submit", value="Update Video")
-  a.video__delete-button(href=routes.deleteVideo(video.id)) Delete video
+    .form__edit
+      form.form(action=routes.editVideo(video.id), method="POST")
+        label.label(for="title") 제목
+        input.input(type="text", id="title", placeholder="Title", name="title", value=video.title)
+        label.label(for="desc") 설명
+        textarea.textarea__desc(name="description", id="desc", placeholder="Description")=video.description
+        button.submit__btn(type="submit") Update Video
+      a.delete__btn(href=routes.deleteVideo(video.id)) Delete Video
