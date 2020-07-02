@@ -1,6 +1,12 @@
 .video__container {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin: 100px 0;
+
+  .videoBlock {
+    margin: 0 20px 60px;
+  }
 
   .video__thumnail {
     margin-bottom: 10px;

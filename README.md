@@ -175,3 +175,12 @@ export default globalRouter;
 ### 스타일링~~!
 
 - li:not(:last-child) !!
+
+---
+
+### passport1
+
+- passport? 깃헙 로그인이나 페이스북 로그인과 같은 것을 도와주는 녀석
+- User 스키마 만들기
+- npm i passport-local-mongoose
+- npm i passport passport-local
