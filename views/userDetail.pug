@@ -2,3 +2,6 @@ extends layouts/main
 
 block content
   h2 #{pageTitle}
+  img(src=user.avatarUrl)
+  h3=user.email
+  h4=user.name

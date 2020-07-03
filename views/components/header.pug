@@ -11,7 +11,7 @@ header.header
         i.fas.fa-search
   .header__column
     ul
-      if !user
+      if !loggedUser
         li
           a(href=routes.login) Sign in
         li
@@ -20,6 +20,6 @@ header.header
         li
           a(href=`/videos${routes.upload}`) upload
         li
-          a(href=routes.userDetail(user.id)) profile
+          a(href=routes.me) profile
         li
           a(href=routes.logout) log out

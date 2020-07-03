@@ -6,6 +6,7 @@ import {
   postJoin,
   getLogin,
   postLogin,
+  getMe,
 } from "../controllers/userController";
 import { onlyPublic, onlyPrivate } from "../middlewares";
 import routes from "../routes";
@@ -37,5 +38,7 @@ globalRouter.get(
     res.redirect(routes.home);
   }
 );
+
+globalRouter.get(routes.me, getMe);
 
 export default globalRouter;
