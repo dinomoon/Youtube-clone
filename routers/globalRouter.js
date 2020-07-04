@@ -28,7 +28,10 @@ globalRouter.post(routes.login, onlyPublic, postLogin);
 // logout
 globalRouter.get(routes.logout, onlyPrivate, logout);
 
-// github
+// User Deatil
+globalRouter.get(routes.me, getMe);
+
+// Github
 globalRouter.get(routes.github, passport.authenticate("github"));
 globalRouter.get(
   routes.githubCallback,
@@ -39,6 +42,37 @@ globalRouter.get(
   }
 );
 
-globalRouter.get(routes.me, getMe);
+// Facebook
+globalRouter.get(routes.facebook, passport.authenticate("facebook"));
+globalRouter.get(
+  routes.facebookCallback,
+  passport.authenticate("facebook", { failureRedirect: routes.login }),
+  function (req, res) {
+    // Successful authentication, redirect home.
+    res.redirect(routes.home);
+  }
+);
+
+// Kakao
+globalRouter.get(routes.kakao, passport.authenticate("kakao"));
+globalRouter.get(
+  routes.kakaoCallback,
+  passport.authenticate("kakao", { failureRedirect: routes.login }),
+  (req, res) => {
+    // Successful authentication, redirect home.
+    res.redirect(routes.home);
+  }
+);
+
+// Google
+globalRouter.get("/auth/google", passport.authenticate("google"));
+globalRouter.get(
+  "/auth/google/callback",
+  passport.authenticate("google", { failureRedirect: "/login" }),
+  function (req, res) {
+    // Successful authentication, redirect home.
+    res.redirect("/");
+  }
+);
 
 export default globalRouter;

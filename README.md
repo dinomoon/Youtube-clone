@@ -215,3 +215,5 @@ export default globalRouter;
 
 - passport Documentation을 참고하기 (복잡..ㅠㅠ)
 - 가장 큰 흐름은 먼저, 사용자를 github으로 보낸다. 그러면 github에서 "얘네들한테 너의 github 정보 줘도돼?" 라고 물어보고, 사용자가 "ok"하면 github의 정보를 우리에게 넘겨준다. 동시에 사용자도 돌아온다.
+
+### User Deatil

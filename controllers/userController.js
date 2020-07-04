@@ -88,3 +88,45 @@ export const githubLoginCallback = async (_, __, profile, cb) => {
     return cb(error);
   }
 };
+
+// Facebook
+export const facebookLoginCallback = (
+  accessToken,
+  refreshToken,
+  profile,
+  cb
+) => {
+  console.log(accessToken, refreshToken, profile, cb);
+};
+
+// Kakao
+export const kakaoLoginCallback = (_, __, profile, cb) => {
+  async (_, __, profile, cb) => {
+    const {
+      id,
+      username: name,
+      _json: {
+        properties: { profile_image },
+        kakao_account: { email },
+      },
+    } = profile;
+    try {
+      const user = await User.findOne({ email });
+      if (user) {
+        user.kakaoId = id;
+        user.save();
+        return cb(null, user);
+      } else {
+        const newUser = await User.create({
+          email,
+          name,
+          kakaoId: id,
+          avartarUrl: profile_image,
+        });
+        return cb(null, newUser);
+      }
+    } catch (error) {
+      return cb(error);
+    }
+  };
+};

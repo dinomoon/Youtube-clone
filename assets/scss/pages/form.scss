@@ -64,6 +64,7 @@
     .social__button {
       color: #fff;
       letter-spacing: 0.05em;
+      // text-align: left;
       .fab {
         margin-right: 10px;
         font-size: 1.2em;
@@ -74,6 +75,10 @@
     }
     .social__button--facebook {
       background-color: $facebook;
+    }
+    .social__button--kakao {
+      background-color: #f9e000;
+      color: #444;
     }
   }
 }

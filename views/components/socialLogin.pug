@@ -1,8 +1,18 @@
 .social__login
+  button(type="button").social__button.social__button--google
+    a(href="/auth/google")
+      i.fab.fa-google
+      | Continue with google
   button(type="button").social__button.social__button--github
     a(href=routes.github)
       i.fab.fa-github
       | Continue with github
   button(type="button").social__button.social__button--facebook
-    i.fab.fa-facebook
-    | Continue with facebook
+    a(href=routes.facebook)
+      i.fab.fa-facebook
+      | Continue with facebook
+  button(type="button").social__button.social__button--kakao
+    a(href=routes.kakao)
+      img(src="/assets/image/kakao_icon.ico")
+      | Continue with kakao
+  

@@ -4,7 +4,7 @@ block content
   .video__container
     .video_wrap
       .video__player
-        video(src=`/${video.fileUrl}`)
+        video(src=`/${video.fileUrl}`, controls=true)
       .video__edit
         a.video__edit--btn(href=routes.editVideo(video.id)) Edit Video
       .video__info

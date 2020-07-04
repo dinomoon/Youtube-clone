@@ -38,8 +38,8 @@ app.use("/static", express.static("static"));
 app.use(
   session({
     secret: process.env.COOKIE_SECRET,
-    resave: true,
-    saveUninitialized: false,
+    resave: false,
+    saveUninitialized: true,
     store: new cookieStore({ mongooseConnection: mongoose.connection }),
   })
 );
