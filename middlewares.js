@@ -5,7 +5,7 @@ export const localMiddleware = (req, res, next) => {
   res.locals.siteName = "Mktube";
   res.locals.routes = routes;
   res.locals.loggedUser = req.user || null;
-  console.log(req.loggedUser);
+  console.log(req.user);
   next();
 };
 
@@ -26,3 +26,4 @@ export const onlyPrivate = (req, res, next) => {
 };
 
 export const uploadVideo = multer({ dest: "videos/" }).single("file");
+export const uploadAvatar = multer({ dest: "avatars/" }).single("avatar");

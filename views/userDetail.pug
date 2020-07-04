@@ -6,4 +6,5 @@ block content
       img.user__img(src=user.avatarUrl)
       h2.user__name=user.name
       h3.user__email=user.email
-      a.edit-profile(href=routes.editProfile(user.id)) Edit Profile
+      if user.id === loggedUser.id
+        a.edit-profile(href=`/users${routes.editProfile}`) Edit Profile

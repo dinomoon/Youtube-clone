@@ -3,12 +3,12 @@ extends layouts/main
 block content
   .form__container
     h2.form__title Edit Profile
-    form.form(action=routes.editProfile, method="POST")
+    form.form(action=`/users${routes.editProfile}`, method="POST", enctype="multipart/form-data")
       label.label(for="avatar") Avatar
-      input.input(type="file", id="avatar", name="avatar")
+      input.input(type="file", id="avatar", name="avatar", accept="image/*")
       label.label(for="name") name
-      input.input(type="text", id="name", value=user.name)
+      input.input(type="text", id="name", name="name", value=loggedUser.name)
       label.label(for="email") email
-      input.input(type="email", id="email", value=user.email)
+      input.input(type="email", id="email", name="email", value=loggedUser.email)
       button.submit__btn(type="submit") Update profile
-    a.change__btn(href=routes.changePassword(user.id)) Change password
+    a.change__btn(href=`/users${routes.changePassword}`) Change password

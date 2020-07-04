@@ -32,6 +32,7 @@ app.use(cookieParser());
 
 // static
 app.use("/videos", express.static("videos"));
+app.use("/avatars", express.static("avatars"));
 app.use("/static", express.static("static"));
 
 // session

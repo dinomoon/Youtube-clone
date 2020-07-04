@@ -40,17 +40,25 @@ export const logout = (req, res) => {
 };
 
 // Edit Profile
-export const editProfile = async (req, res) => {
+export const getEditProfile = async (req, res) => {
+  res.render("editProfile", { pageTitle: req.user.name });
+};
+
+export const postEditProfile = async (req, res) => {
   const {
-    params: { id },
+    body: { name, email },
+    file,
   } = req;
-  console.log(id);
   try {
-    const user = await User.findById(id);
-    res.render("editProfile", { pageTitle: "editProfile", user });
+    await User.findByIdAndUpdate(req.user.id, {
+      name,
+      email,
+      avatarUrl: file ? file.path : req.user.avatarUrl,
+    });
+    res.redirect(routes.me);
   } catch (error) {
     console.log(error);
-    res.redirect(routes.home);
+    res.render("editProfile", { pageTitle: req.user.name });
   }
 };
 
@@ -72,7 +80,7 @@ export const userDetail = async (req, res) => {
 };
 
 export const getMe = (req, res) => {
-  res.render("userDetail", { pageTitle: "userDeatil", user: req.user });
+  res.render("userDetail", { pageTitle: req.user.name, user: req.user });
 };
 
 // Github
@@ -84,7 +92,7 @@ export const githubLoginCallback = async (_, __, profile, cb) => {
     const user = await User.findOne({ email });
     if (user) {
       user.githubId = githubId;
-      user.avtarUrl = avatarUrl;
+      user.avatarUrl = avatarUrl;
       user.save();
       return cb(null, user);
     }
