@@ -2,11 +2,11 @@ extends layouts/main
 
 block content
   .form__container
-    .form__edit
+    .form__video
       form.form(action=routes.editVideo(video.id), method="POST")
         label.label(for="title") 제목
-        input.input(type="text", id="title", placeholder="Title", name="title", value=video.title)
+        input.input(type="text", id="title", name="title", value=video.title)
         label.label(for="desc") 설명
-        textarea.textarea__desc(name="description", id="desc", placeholder="Description")=video.description
+        textarea.textarea__desc(name="description", id="desc")=video.description
         button.submit__btn(type="submit") Update Video
       a.delete__btn(href=routes.deleteVideo(video.id)) Delete Video

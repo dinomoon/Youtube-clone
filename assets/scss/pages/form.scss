@@ -2,6 +2,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .form__video {
+    .input,
+    .submit__btn,
+    .delete__btn,
+    .change__btn,
+    .social__button,
+    .textarea__desc {
+      width: 500px;
+    }
+  }
+
   .form__title {
     margin-bottom: 40px;
     font-weight: 400;
@@ -11,6 +23,7 @@
   .input,
   .submit__btn,
   .delete__btn,
+  .change__btn,
   .social__button,
   .textarea__desc {
     display: block;
@@ -19,22 +32,14 @@
     padding: 10px 16px;
     border-radius: 4px;
   }
-  .form__edit {
-    .input,
-    .submit__btn,
-    .delete__btn,
-    .social__button,
-    .textarea__desc {
-      width: 500px;
-    }
-  }
 
   .textarea__desc {
     height: 300px;
   }
 
   .submit__btn,
-  .delete__btn {
+  .delete__btn,
+  .change__btn {
     color: #fff;
     letter-spacing: 0.1em;
   }
@@ -43,7 +48,8 @@
     background-color: #3498db;
   }
 
-  .delete__btn {
+  .delete__btn,
+  .change__btn {
     text-align: center;
     background-color: $red;
   }

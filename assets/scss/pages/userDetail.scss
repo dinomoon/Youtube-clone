@@ -1,0 +1,29 @@
+.user__container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  .user__wrap {
+    .user__img {
+      width: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .user__name {
+      margin-bottom: 20px;
+    }
+
+    .user__email,
+    .edit-profile {
+      margin-bottom: 10px;
+    }
+
+    .edit-profile,
+    .change-password {
+      display: block;
+      padding: 8px 0;
+      border: 1px solid;
+    }
+  }
+}

@@ -2,9 +2,12 @@ extends layouts/main
 
 block content
   .form__container
-    form(action=`/videos${routes.upload}`, method="POST", enctype="multipart/form-data")
-      label(for="file") Video file
-      input(type="file", id="file", name="file", required=true, accept="video/*")
-      input(type="text", name="title", placeholder="title", required=true)
-      textarea(name="description", placeholder="Description", required=true)
-      button(type="submit") Upload
+    .form__video
+      form.form(action=`/videos${routes.upload}`, method="POST", enctype="multipart/form-data")
+        label.label(for="file") Video file
+        input.input(type="file", id="file", name="file", required=true, accept="video/*")
+        label.label(for="title") Title
+        input.input(type="text", id="title," name="title", required=true)
+        label.label(for="desc") 설명
+        textarea.textarea__desc(name="description", id="desc" required=true)
+        button.submit__btn(type="submit") Upload

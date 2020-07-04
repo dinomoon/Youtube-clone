@@ -40,8 +40,19 @@ export const logout = (req, res) => {
 };
 
 // Edit Profile
-export const editProfile = (req, res) =>
-  res.render("editProfile", { pageTitle: "editProfile" });
+export const editProfile = async (req, res) => {
+  const {
+    params: { id },
+  } = req;
+  console.log(id);
+  try {
+    const user = await User.findById(id);
+    res.render("editProfile", { pageTitle: "editProfile", user });
+  } catch (error) {
+    console.log(error);
+    res.redirect(routes.home);
+  }
+};
 
 // Chagne Password
 export const changePassword = (req, res) =>

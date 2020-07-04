@@ -2,12 +2,13 @@ extends layouts/main
 
 block content
   .form__container
-    form(action=routes.editProfile, method="POST")
-      label(for="avatar") Avatar
-      input(type="file", id="avatar", name="avatar")
-      label(for="name") name
-      input(type="text", id="name", placeholder="name")
-      label(for="email") email
-      input(type="email", id="email", placeholder="email")
-      button(type="submit") Update profile
-    a.change__password(href=`/users/${routes.changePassword}`) Change password
+    h2.form__title Edit Profile
+    form.form(action=routes.editProfile, method="POST")
+      label.label(for="avatar") Avatar
+      input.input(type="file", id="avatar", name="avatar")
+      label.label(for="name") name
+      input.input(type="text", id="name", value=user.name)
+      label.label(for="email") email
+      input.input(type="email", id="email", value=user.email)
+      button.submit__btn(type="submit") Update profile
+    a.change__btn(href=routes.changePassword(user.id)) Change password
