@@ -58,13 +58,30 @@ export const postEditProfile = async (req, res) => {
     res.redirect(routes.me);
   } catch (error) {
     console.log(error);
-    res.render("editProfile", { pageTitle: req.user.name });
+    res.redirect(routes.editProfile);
   }
 };
 
 // Chagne Password
-export const changePassword = (req, res) =>
+export const getChangePassword = (req, res) =>
   res.render("changePassword", { pageTitle: "change-password" });
+
+export const postChangePassword = async (req, res) => {
+  const {
+    body: { currentPasswod, newPassword, verifyPassword },
+  } = req;
+  try {
+    if (newPassword !== verifyPassword) {
+      res.status(400);
+      res.redirect(`/users${routes.changePassword}`);
+      return;
+    }
+    await req.user.changePassword(currentPasswod, newPassword);
+    res.redirect(routes.me);
+  } catch (error) {
+    res.redirect(`/users${routes.changePassword}`);
+  }
+};
 
 // User Deatil
 export const userDetail = async (req, res) => {

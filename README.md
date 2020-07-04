@@ -221,3 +221,5 @@ export default globalRouter;
 ### Edit Profile
 
 - 후.. 한참 안되서 겨우 찾았다.. input태그에 name속성을 안넣어서 값이 안넘어왔던 것......
+
+### Change password
