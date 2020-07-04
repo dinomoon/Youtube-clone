@@ -223,3 +223,7 @@ export default globalRouter;
 - 후.. 한참 안되서 겨우 찾았다.. input태그에 name속성을 안넣어서 값이 안넘어왔던 것......
 
 ### Change password
+
+### Adding creator to video
+
+- const video = await Video.findById(id).populate("creator")

@@ -6,9 +6,11 @@ block content
       .video__player
         video(src=`/${video.fileUrl}`, controls=true)
       .video__edit
-        a.video__edit--btn(href=routes.editVideo(video.id)) Edit Video
+        if video.creator.id === loggedUser.id
+          a.video__edit--btn(href=routes.editVideo(video.id)) Edit Video
       .video__info
-        h3.video__title=video.title
+        h2.video__title=video.title
+        a.video__creator(href=routes.userDetail(video.creator.id))=video.creator.name
         strong.video__views 조회수 #{video.views}
         p.video__description=video.description
       .video__comments
