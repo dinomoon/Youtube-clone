@@ -227,3 +227,7 @@ export default globalRouter;
 ### Adding creator to video
 
 - const video = await Video.findById(id).populate("creator")
+
+### Protecting Video Routes
+
+- 아이디를 가지고 같은 URL로 들어와도 현재 접속한 사람의 id가 만든사람의 아이디와 다르면 Edit이나 Delete을 하지 못하도록 막기
