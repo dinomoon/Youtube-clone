@@ -1,6 +1,10 @@
 .video__player {
   position: relative;
 
+  video {
+    width: 100%;
+  }
+
   &:hover .video__controls {
     opacity: 1;
   }

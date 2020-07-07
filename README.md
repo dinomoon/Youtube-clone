@@ -233,3 +233,5 @@ export default globalRouter;
 - 아이디를 가지고 같은 URL로 들어와도 현재 접속한 사람의 id가 만든사람의 아이디와 다르면 Edit이나 Delete을 하지 못하도록 막기
 
 ### Video Contol 스타일링
+
+### Video Control 자바스크립트 구현
