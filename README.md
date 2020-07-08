@@ -235,3 +235,5 @@ export default globalRouter;
 ### Video Contol 스타일링
 
 ### Video Control 자바스크립트 구현
+
+### Volume Range 구현

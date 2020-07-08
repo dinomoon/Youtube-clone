@@ -5,6 +5,7 @@ const volumeBtn = document.querySelector("#volume-btn");
 const fullScreenBtn = document.querySelector("#fullscreen-btn");
 const currentTime = document.querySelector("#current-time");
 const totalTime = document.querySelector("#total-time");
+const volumeRange = document.querySelector(".volume-range");
 
 const handlePlayBtn = () => {
   if (video.paused) {
@@ -19,10 +20,18 @@ const handlePlayBtn = () => {
 const handleVolumeBtn = () => {
   if (video.muted) {
     video.muted = false;
-    volumeBtn.innerHTML = "<i class='fas fa-volume-up'></i>";
+    if (video.volume >= 0.6) {
+      volumeBtn.innerHTML = "<i class='fas fa-volume-up'></i>";
+    } else if (video.volume >= 0.2) {
+      volumeBtn.innerHTML = "<i class='fas fa-volume-down'></i>";
+    } else {
+      volumeBtn.innerHTML = "<i class='fas fa-volume-off'></i>";
+    }
+    volumeRange.value = video.volume;
   } else {
     video.muted = true;
-    volumeBtn.innerHTML = "<i class='fas fa-volume-off'></i>";
+    volumeBtn.innerHTML = "<i class='fas fa-volume-mute'></i>";
+    volumeRange.value = 0;
   }
 };
 
@@ -67,11 +76,34 @@ const handleTime = () => {
   setInterval(getCurrentTime, 1000);
 };
 
+const handleEnded = () => {
+  video.currentTime = 0;
+  playBtn.innerHTML = '<i class="fas fa-play"></i>';
+};
+
+const handleVolumeRange = (event) => {
+  const {
+    target: { value },
+  } = event;
+  video.volume = value;
+  if (value >= 0.6) {
+    volumeBtn.innerHTML = "<i class='fas fa-volume-up'></i>";
+  } else if (value >= 0.2) {
+    volumeBtn.innerHTML = "<i class='fas fa-volume-down'></i>";
+  } else {
+    volumeBtn.innerHTML = "<i class='fas fa-volume-off'></i>";
+  }
+};
+
 const init = () => {
+  video.volume = 0.5;
   playBtn.addEventListener("click", handlePlayBtn);
   volumeBtn.addEventListener("click", handleVolumeBtn);
   fullScreenBtn.addEventListener("click", toggleFullScreen);
   video.addEventListener("loadedmetadata", handleTime);
+  video.addEventListener("ended", handleEnded);
+  video.addEventListener("click", handlePlayBtn);
+  volumeRange.addEventListener("input", handleVolumeRange);
 };
 
 if (videoPlayer) {

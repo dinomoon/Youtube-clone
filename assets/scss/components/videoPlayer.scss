@@ -29,15 +29,23 @@
     }
 
     .video__controls--column:nth-child(1) {
+      position: relative;
       display: flex;
       align-items: center;
-      span {
-        margin-right: 10px;
+      #volume-btn {
+        width: 35px;
       }
+
+      .volume-range {
+        position: absolute;
+        left: -54px;
+        top: -82px;
+        transform: rotate(-90deg);
+      }
+
       #current-time:after {
         content: "/";
-        margin-left: 3px;
-        margin-right: -7px;
+        margin: 0 3px;
       }
     }
 
