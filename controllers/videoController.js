@@ -3,7 +3,7 @@ import Video from "../models/Video";
 
 export const home = async (req, res) => {
   try {
-    const videos = await Video.find().sort({ _id: -1 });
+    const videos = await Video.find().sort({ _id: -1 }).populate("creator");
     res.render("home", { pageTitle: "home", videos });
   } catch (error) {
     console.log(error);
@@ -101,4 +101,20 @@ export const deleteVideo = async (req, res) => {
     console.log(error);
   }
   res.redirect(routes.home);
+};
+
+// API
+export const registerView = async (req, res, next) => {
+  const {
+    params: { id },
+  } = req;
+  try {
+    const video = await Video.findById(id);
+    video.views += 1;
+    await video.save();
+    next();
+    res.status(200);
+  } catch (error) {
+    res.status(400);
+  }
 };

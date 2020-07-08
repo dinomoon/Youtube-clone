@@ -239,3 +239,7 @@ export default globalRouter;
 ### Volume Range 구현
 
 ### Video Recording 구현
+
+### 조회수
+
+- 영상에서는 비디오를 다보면 조회수가 올라가도록 했는 데, 나는 영상 페이지에 들어오기만 하면 조회수가 올라가도록 했다.
