@@ -237,3 +237,5 @@ export default globalRouter;
 ### Video Control 자바스크립트 구현
 
 ### Volume Range 구현
+
+### Video Recording 구현

@@ -24,6 +24,7 @@
   .submit__btn,
   .delete__btn,
   .change__btn,
+  #recording-btn,
   .social__button,
   .textarea__desc {
     display: block;
@@ -33,18 +34,30 @@
     border-radius: 4px;
   }
 
+  #recording-btn {
+    width: 500px;
+  }
+
+  #recording-video {
+    width: 100%;
+    margin-top: 60px;
+    background-color: #444;
+  }
+
   .textarea__desc {
     height: 300px;
   }
 
   .submit__btn,
   .delete__btn,
-  .change__btn {
+  .change__btn,
+  #recording-btn {
     color: #fff;
     letter-spacing: 0.1em;
   }
 
-  .submit__btn {
+  .submit__btn,
+  #recording-btn {
     background-color: #3498db;
   }
 

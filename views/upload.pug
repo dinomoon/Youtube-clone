@@ -2,6 +2,9 @@ extends layouts/main
 
 block content
   .form__container
+    .video__recording
+      video#recording-video
+      button.button#recording-btn(type="button") Start Recording
     .form__video
       form.form(action=`/videos${routes.upload}`, method="POST", enctype="multipart/form-data")
         label.label(for="file") Video file
