@@ -34,6 +34,11 @@
       span {
         margin-right: 10px;
       }
+      #current-time:after {
+        content: "/";
+        margin-left: 3px;
+        margin-right: -7px;
+      }
     }
 
     .video__controls--column:nth-child(2) {
