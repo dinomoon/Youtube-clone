@@ -18,6 +18,7 @@ const UPLOAD = "/upload";
 const VIDEO_DETAIL = "/:id";
 const EDIT_VIDEO = "/:id/edit";
 const DELETE_VIDEO = "/:id/delete";
+const ADD_COMMENT = "/:id/comment";
 
 // Github
 const GITHUB = "/auth/github";
@@ -77,6 +78,7 @@ const routes = {
   kakao: KAKAO,
   kakaoCallback: KAKAO_CALLBACK,
   me: ME,
+  addComment: ADD_COMMENT,
 };
 
 export default routes;

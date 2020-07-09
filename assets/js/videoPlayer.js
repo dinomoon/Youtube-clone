@@ -96,6 +96,8 @@ const handleVolumeRange = (event) => {
 };
 
 const init = () => {
+  video.play();
+  playBtn.innerHTML = "<i class='fas fa-pause'></i>";
   video.volume = 0.5;
   playBtn.addEventListener("click", handlePlayBtn);
   volumeBtn.addEventListener("click", handleVolumeBtn);

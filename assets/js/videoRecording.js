@@ -45,4 +45,10 @@ const getVideo = async () => {
   }
 };
 
-recordingBtn.addEventListener("click", getVideo);
+const init = () => {
+  recordingBtn.addEventListener("click", getVideo);
+};
+
+if (recordingBtn) {
+  init();
+}

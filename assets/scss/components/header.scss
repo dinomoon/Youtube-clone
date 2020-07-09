@@ -2,7 +2,7 @@
   height: 56px;
   padding: 0 16px;
   color: #fff;
-  background-color: #333;
+  background-color: #202020;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,10 +29,10 @@
   }
 
   .search__box {
-    width: 400px;
+    width: 530px;
     padding: 6px;
     border-radius: 4px;
-    background-color: #000;
+    background-color: #121212;
     color: $dark-gray;
     font-weight: bold;
   }
@@ -44,7 +44,7 @@
   .search__button {
     padding: 6px 20px;
     border-radius: 4px;
-    background-color: #444;
+    background-color: #313131;
     .fa-search {
       color: $dark-gray;
     }
