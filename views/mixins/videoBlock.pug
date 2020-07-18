@@ -4,5 +4,6 @@ mixin videoBlock(video)
       video.video__thumnail(src=video.fileUrl, controls=true)
       .video__info
         h2.video__title=video.title
-        strong.video__creator=video.creator.name
+        if video.creator.name
+          strong.video__creator=video.creator.name
         strong.video__views 조회수 #{video.views}회

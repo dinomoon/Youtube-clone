@@ -1,5 +1,6 @@
 const videoPlayer = document.querySelector(".video__player");
 const video = document.querySelector(".video__player video");
+const videoControls = document.querySelector(".video__controls");
 const playBtn = document.querySelector("#play-btn");
 const volumeBtn = document.querySelector("#volume-btn");
 const fullScreenBtn = document.querySelector("#fullscreen-btn");
@@ -95,6 +96,22 @@ const handleVolumeRange = (event) => {
   }
 };
 
+let hideTimeout = null;
+
+const showControls = () => {
+  if (hideTimeout) {
+    clearTimeout(hideTimeout);
+  }
+  videoPlayer.style.cursor = "default";
+  videoControls.classList.add("showing");
+  hideTimeout = setTimeout(hideControls, 2000);
+};
+
+const hideControls = () => {
+  videoPlayer.style.cursor = "none";
+  videoControls.classList.remove("showing");
+};
+
 const init = () => {
   video.play();
   playBtn.innerHTML = "<i class='fas fa-pause'></i>";
@@ -106,6 +123,8 @@ const init = () => {
   video.addEventListener("ended", handleEnded);
   video.addEventListener("click", handlePlayBtn);
   volumeRange.addEventListener("input", handleVolumeRange);
+  videoPlayer.addEventListener("mousemove", showControls);
+  videoPlayer.addEventListener("mouseleave", hideControls);
 };
 
 if (videoPlayer) {

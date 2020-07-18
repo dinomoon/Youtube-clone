@@ -7,6 +7,7 @@ import {
   getLogin,
   postLogin,
   getMe,
+  userDetail,
 } from "../controllers/userController";
 import { onlyPublic, onlyPrivate } from "../middlewares";
 import routes from "../routes";

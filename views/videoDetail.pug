@@ -23,12 +23,18 @@ block content
         form.comment__form
           input.input(type="text", placeholder="댓글 추가하기")
           button.button.reset(type="reset") 취소
-          button.button(type="submit") 추가
+          button.button.add(type="submit") 추가
         ul.comment__list
           each comment in video.comments
-            li
+            li.comment__list--item
               each user in users
                 if comment.creator == user.id
-                  a(href=routes.userDetail(user.id))=user.name
+                  div.comment__wrap
+                    a(href=routes.userDetail(user.id))
+                      img.user__img(src=user.avatarUrl)
+                    div
+                      a(href=routes.userDetail(user.id))
+                        span=user.name
+                      p=comment.text
                   -break
-              p=comment.text
+              

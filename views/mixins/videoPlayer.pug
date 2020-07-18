@@ -2,9 +2,10 @@ mixin videoPlayer(video)
   video(src=`/${video.fileUrl}`)
   .video__controls
     .video__controls--column
-      span#volume-btn
-        i.fas.fa-volume-down
-      input.volume-range(type="range", min="0" max="1" value="0.5" step="0.1")
+      .volume
+        span#volume-btn
+          i.fas.fa-volume-down
+        input.volume-range(type="range", min="0" max="1" value="0.5" step="0.1")
       span
         span#current-time 00:00:00
         span#total-time 00:00:00

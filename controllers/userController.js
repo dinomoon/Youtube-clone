@@ -97,8 +97,12 @@ export const userDetail = async (req, res) => {
   }
 };
 
-export const getMe = (req, res) => {
-  res.render("userDetail", { pageTitle: req.user.name, user: req.user });
+export const getMe = async (req, res) => {
+  console.log(req.user);
+  res.render("userDetail", {
+    pageTitle: req.user.name,
+    user: req.user,
+  });
 };
 
 // Github

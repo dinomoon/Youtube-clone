@@ -6,10 +6,8 @@ block content
     .user__wrap
       img.user__img(src=user.avatarUrl)
       h2.user__name=user.name
-      h3.user__email=user.email
       if loggedUser && user.id === loggedUser.id
         a.edit-profile(href=`/users${routes.editProfile}`) Edit Profile
     .video__container
       each video in user.videos
-        +videoBlock(video)
         +videoBlock(video)
